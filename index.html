@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Nilai Mahasiswa</h1>
+        <p>Masukkan data mahasiswa untuk menentukan predikat nilai.</p>
+
+        <form id="formNilai">
+            <label for="nama">Nama Mahasiswa</label>
+            <input type="text" id="nama" placeholder="Masukkan nama" required>
+
+            <label for="nilai">Nilai Mahasiswa (0-100)</label>
+            <input type="number" id="nilai" placeholder="Masukkan nilai"
+                   min="0" max="100" required>
+
+            <button type="submit">Hitung Nilai</button>
+        </form>
+
+        <div id="hasil"></div>
+
+        <h2>Riwayat Nilai</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Nilai</th>
+                    <th>Predikat</th>
+                </tr>
+            </thead>
+            <tbody id="daftarNilai"></tbody>
+        </table>
+
+        <button type="button" id="prosesUlang" class="secondary">
+            Proses Ulang Riwayat
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
