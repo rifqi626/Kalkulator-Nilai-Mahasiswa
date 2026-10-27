@@ -1,177 +1,138 @@
-Program Kalkulator Nilai Mahasiswa adalah program berbasis web yang dibuat menggunakan tiga bahasa pemrograman, yaitu HTML, CSS, dan JavaScript. Program ini bertujuan untuk membantu pengguna memasukkan data mahasiswa, menentukan predikat berdasarkan nilai yang diperoleh, menampilkan riwayat nilai, serta menghitung rata-rata nilai seluruh mahasiswa yang telah dimasukkan.
+# Kalkulator Nilai Mahasiswa
 
-Program ini menerapkan dua konsep dasar pemrograman, yaitu percabangan (if-else) dan perulangan (for).
-1. Penjelasan HTML (index.html)
-HTML berfungsi untuk membuat struktur dan komponen utama pada halaman web.
+## 1. Deskripsi Program
 
-Bagian-bagian HTML dalam program ini adalah:
-- Judul program: Menampilkan judul “Kalkulator Nilai Mahasiswa” agar pengguna mengetahui fungsi program.
-- Formulir input: Menyediakan kolom untuk memasukkan nama dan nilai mahasiswa.
-- Tombol Hitung Nilai: Digunakan untuk memproses data yang telah dimasukkan.
-- Bagian hasil: Menampilkan predikat dan keterangan nilai mahasiswa.
-- Tabel riwayat nilai: Menampilkan daftar nama, nilai, dan predikat mahasiswa yang telah diproses.
-- Tombol Proses Ulang Riwayat: Digunakan untuk menghitung jumlah mahasiswa dan rata-rata nilai mereka.
-HTML juga menghubungkan file CSS melalui style.css dan file JavaScript melalui script.js, sehingga tampilan dan fungsi program dapat berjalan bersama.
-2. Penjelasan CSS (style.css)
-CSS berfungsi untuk mengatur tampilan halaman web agar lebih menarik, rapi, dan mudah digunakan.
+Kalkulator Nilai Mahasiswa adalah program berbasis web yang dibuat menggunakan HTML, CSS, dan JavaScript. Program ini berfungsi untuk memasukkan nama dan nilai mahasiswa, menentukan predikat berdasarkan nilai yang diperoleh, menampilkan riwayat nilai, serta menghitung rata-rata nilai mahasiswa.
 
-Beberapa pengaturan yang digunakan antara lain:
-- body: Mengatur jenis huruf, warna latar belakang, dan jarak halaman.
-- .container: Mengatur area utama program, termasuk lebar, jarak dalam, dan sudut kotak.
-- input: Mengatur tampilan kolom untuk memasukkan nama dan nilai mahasiswa.
-- button: Mengatur warna, ukuran, dan tampilan tombol.
-- table: Mengatur lebar tabel, garis pembatas, serta posisi teks.
-- @media: Menyesuaikan tampilan agar tetap nyaman digunakan pada layar yang lebih kecil, seperti ponsel.
-Dengan CSS, program tidak hanya berfungsi dengan baik, tetapi juga memiliki tampilan yang lebih teratur dan nyaman dilihat.
-3. Penjelasan JavaScript (script.js)
-JavaScript merupakan bagian utama yang menjalankan logika program. Pada bagian ini terdapat proses pemeriksaan input, penentuan predikat nilai, penyimpanan data sementara, penampilan tabel, dan perhitungan rata-rata.
-A. Mengambil elemen HTML
-Pada awal program terdapat kode seperti berikut:
-const form = document.getElementById("formNilai");
-const hasil = document.getElementById("hasil");
+Program ini dibuat untuk menerapkan konsep dasar pemrograman, khususnya percabangan (`if-else`) dan perulangan (`for`).
 
+## 2. Tujuan Program
 
-Kode tersebut digunakan untuk mengambil elemen HTML berdasarkan ID-nya. Dengan demikian, JavaScript dapat membaca input, menampilkan hasil, dan merespons tindakan pengguna.
-B. Memproses input mahasiswa
-Ketika pengguna menekan tombol Hitung Nilai, program membaca nama dan nilai yang dimasukkan.
-const nama = document.getElementById("nama").value.trim();
-const nilai = Number(document.getElementById("nilai").value);
+Tujuan pembuatan program ini adalah:
+- Memahami penggunaan HTML, CSS, dan JavaScript dalam pembuatan website.
+- Menerapkan percabangan untuk menentukan predikat nilai mahasiswa.
+- Menerapkan perulangan untuk menampilkan dan mengolah data mahasiswa.
+- Melakukan validasi input agar data yang dimasukkan sesuai.
+- Menghitung rata-rata nilai mahasiswa secara otomatis.
 
+## 3. Teknologi yang Digunakan
 
-- value digunakan untuk mengambil nilai yang dimasukkan pengguna.
-- trim() menghapus spasi di awal dan akhir nama.
-- Number() mengubah input nilai menjadi tipe data angka.
-Setelah itu, program memeriksa apakah data yang dimasukkan sudah sesuai.
-C. Percabangan if-else
-Percabangan digunakan untuk mengambil keputusan berdasarkan kondisi tertentu. Dalam program ini, percabangan memiliki beberapa kondisi.
+- **HTML:** Membuat struktur halaman, formulir input, tombol, dan tabel.
+- **CSS:** Mengatur tampilan halaman agar lebih rapi, menarik, dan responsif.
+- **JavaScript:** Mengatur logika program, validasi input, penentuan predikat, serta pengolahan data mahasiswa.
 
-Contoh kode:
-if (nilai >= 90) {
-    predikat = "A";
-    keterangan = "Sangat Baik";
-} else if (nilai >= 80) {
-    predikat = "B";
-    keterangan = "Baik";
-} else if (nilai >= 70) {
-    predikat = "C";
-    keterangan = "Cukup";
-} else if (nilai >= 60) {
-    predikat = "D";
-    keterangan = "Kurang";
-} else {
-    predikat = "E";
-    keterangan = "Tidak Lulus";
-}
+## 4. Fitur Program
 
+Program ini memiliki beberapa fitur, yaitu:
 
-Cara kerjanya adalah program memeriksa kondisi secara berurutan. Jika nilai memenuhi suatu kondisi, program menetapkan predikat yang sesuai dan tidak perlu memeriksa kondisi berikutnya.
+1. Memasukkan nama mahasiswa.
+2. Memasukkan nilai mahasiswa dengan rentang 0–100.
+3. Memeriksa validitas nama dan nilai.
+4. Menentukan predikat nilai secara otomatis.
+5. Menampilkan riwayat nilai mahasiswa dalam tabel.
+6. Menghitung jumlah mahasiswa yang telah dimasukkan.
+7. Menghitung rata-rata nilai seluruh mahasiswa.
+8. Menampilkan pesan jika input tidak valid atau belum terdapat data.
 
-Berikut pembagian predikat nilai:
-Rentang nilai	Predikat	Keterangan
-90–100	A	Sangat Baik
-80–89	B	Baik
-70–79	C	Cukup
-60–69	D	Kurang
-0–59	E	Tidak Lulus
+## 5. Penjelasan Konsep Pemrograman
 
-Selain menentukan predikat, if-else juga digunakan untuk memeriksa nama kosong, nilai di luar rentang 0–100, dan nilai yang bukan bilangan bulat.
+### A. Percabangan (`if-else`)
 
-Dengan demikian, program memiliki lebih dari lima kondisi percabangan sesuai kebutuhan tugas.
-D. Menyimpan data mahasiswa
-Setelah data dinyatakan valid dan predikat berhasil ditentukan, data dimasukkan ke dalam array menggunakan kode:
-dataMahasiswa.push({
-    nama: nama,
-    nilai: nilai,
-    predikat: predikat,
-    keterangan: keterangan
-});
+Percabangan digunakan untuk memeriksa kondisi dan menentukan tindakan yang sesuai.
 
+Dalam program ini, percabangan digunakan untuk memvalidasi input dan menentukan predikat nilai mahasiswa berdasarkan rentang nilai berikut:
 
-Array dataMahasiswa berfungsi sebagai tempat penyimpanan sementara untuk seluruh data mahasiswa yang telah dimasukkan.
+| Rentang Nilai | Predikat | Keterangan |
+|---|---|---|
+| 90–100 | A | Sangat Baik |
+| 80–89 | B | Baik |
+| 70–79 | C | Cukup |
+| 60–69 | D | Kurang |
+| 0–59 | E | Tidak Lulus |
 
-Contohnya, jika pengguna memasukkan tiga mahasiswa, array akan menyimpan ketiga data tersebut selama halaman masih berjalan. Data ini belum disimpan secara permanen ke database.
-E. Perulangan for
-Perulangan for digunakan untuk menjalankan suatu perintah berulang kali selama kondisi yang ditentukan masih terpenuhi.
+Program juga memeriksa apakah nama kosong, nilai berada di luar rentang 0–100, atau nilai bukan bilangan bulat.
 
-Contoh kode:
-for (let i = 0; i < dataMahasiswa.length; i++) {
-    const mahasiswa = dataMahasiswa[i];
-}
+### B. Perulangan (`for`)
 
+Perulangan `for` digunakan untuk menjalankan perintah berulang kali selama kondisi yang ditentukan terpenuhi.
 
-Penjelasannya:
-- let i = 0 berarti perulangan dimulai dari indeks 0.
-- i < dataMahasiswa.length berarti perulangan berjalan selama indeks masih berada dalam jumlah data.
-- i++ berarti nilai indeks bertambah satu setiap kali perulangan dilakukan.
-Perulangan tersebut digunakan untuk membaca setiap data mahasiswa, kemudian menampilkannya ke dalam tabel riwayat nilai.
+Dalam program ini, perulangan digunakan untuk:
+- Membaca seluruh data mahasiswa yang tersimpan.
+- Menampilkan data mahasiswa ke dalam tabel riwayat nilai.
+- Menjumlahkan seluruh nilai mahasiswa untuk menghitung rata-rata.
 
-Program juga menggunakan for untuk menjumlahkan seluruh nilai mahasiswa sebelum menghitung rata-rata.
-F. Menampilkan riwayat nilai
-Fungsi tampilkanNilai() bertugas menampilkan data mahasiswa ke tabel HTML.
+### C. Array
 
-Sebelum tabel diperbarui, bagian isi tabel dikosongkan menggunakan:
-daftarNilai.innerHTML = "";
+Array `dataMahasiswa` digunakan untuk menyimpan data mahasiswa secara sementara. Data yang disimpan meliputi nama, nilai, predikat, dan keterangan.
 
+Data tersebut digunakan untuk menampilkan riwayat nilai dan melakukan perhitungan rata-rata.
 
-Selanjutnya, perulangan for membaca seluruh data dalam array. Setiap data dimasukkan ke dalam baris tabel yang berisi nama, nilai, dan predikat.
+### D. Fungsi
 
-Dengan cara ini, setiap mahasiswa baru yang ditambahkan akan muncul dalam tabel tanpa harus membuat tabel secara manual.
-G. Menghitung rata-rata nilai
-Ketika tombol Proses Ulang Riwayat ditekan, program memeriksa apakah terdapat data mahasiswa.
+Fungsi `tampilkanNilai()` digunakan untuk menampilkan seluruh data mahasiswa ke dalam tabel. Fungsi ini membuat kode lebih terstruktur dan memudahkan pengelolaan tampilan data.
 
-Jika data tersedia, program menjumlahkan seluruh nilai menggunakan perulangan for.
-let total = 0;
+### E. Perhitungan Rata-rata
 
-for (let i = 0; i < dataMahasiswa.length; i++) {
-    total += dataMahasiswa[i].nilai;
-}
+Rata-rata nilai dihitung dengan membagi total seluruh nilai dengan jumlah mahasiswa.
 
-const rataRata = total / dataMahasiswa.length;
+**Rumus:**
 
+Rata-rata = Total seluruh nilai / Jumlah mahasiswa
 
-Rumus yang digunakan adalah:
-\[
-\text{Rata-rata} =
-\frac{\text{Total seluruh nilai}}{\text{Jumlah mahasiswa}}
-\]
+Contoh, jika nilai mahasiswa adalah 90, 80, dan 70, maka:
 
-Sebagai contoh, terdapat tiga mahasiswa dengan nilai 90, 80, dan 70.
-\[
-\text{Rata-rata}=\frac{90+80+70}{3}=80
-\]
+Rata-rata = (90 + 80 + 70) / 3 = 80
 
-Hasil yang ditampilkan adalah jumlah mahasiswa sebanyak 3 orang dan rata-rata nilai sebesar 80,00.
-4. Alur kerja program
-Secara keseluruhan, program berjalan dengan urutan berikut:
-1. Pengguna memasukkan nama dan nilai
+Hasil perhitungan akan ditampilkan ketika tombol **Proses Ulang Riwayat** ditekan.
 
-2. JavaScript memeriksa validitas input
+## 6. Alur Kerja Program
 
-3. Percabangan if-else menentukan predikat
+1. Pengguna memasukkan nama dan nilai mahasiswa.
+2. Program memeriksa apakah input sudah valid.
+3. Percabangan `if-else` menentukan predikat berdasarkan nilai.
+4. Data mahasiswa disimpan ke dalam array.
+5. Perulangan `for` menampilkan data ke dalam tabel riwayat nilai.
+6. Pengguna dapat memasukkan data mahasiswa lainnya.
+7. Pengguna menekan tombol **Proses Ulang Riwayat** untuk melihat jumlah mahasiswa dan rata-rata nilai.
 
-4. Data disimpan ke dalam array
+## 7. Struktur File
 
-5. Perulangan for menampilkan riwayat nilai
+```text
+kalkulator-nilai-mahasiswa/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
 
-6. Program menghitung rata-rata jika diminta
+- `index.html`: Struktur halaman website.
+- `style.css`: Pengaturan tampilan website.
+- `script.js`: Logika program, percabangan, perulangan, dan perhitungan.
+- `README.md`: Dokumentasi program.
 
+## 8. Cara Menjalankan Program
 
-5. Contoh penggunaan program
-Misalnya, pengguna memasukkan data berikut:
-Nama mahasiswa	Nilai	Predikat
-Andi	95	A — Sangat Baik
-Budi	85	B — Baik
-Citra	75	C — Cukup
-Deni	65	D — Kurang
-Eka	50	E — Tidak Lulus
+1. Unduh atau salin repository ke komputer.
+2. Buka folder proyek menggunakan Visual Studio Code.
+3. Pastikan seluruh file tersedia dalam satu folder.
+4. Buka `index.html` menggunakan browser atau ekstensi Live Server.
+5. Masukkan nama dan nilai mahasiswa.
+6. Klik **Hitung Nilai** untuk melihat predikat.
+7. Klik **Proses Ulang Riwayat** untuk menghitung jumlah mahasiswa dan rata-rata nilai.
 
-Setelah seluruh data dimasukkan, tabel akan menampilkan kelima mahasiswa tersebut. Jika tombol Proses Ulang Riwayat ditekan, program akan menghitung rata-rata nilai:
-[frac{95+85+75+65+50}{5}=74
+Program juga dapat dipublikasikan menggunakan GitHub Pages agar dapat diakses melalui browser tanpa menjalankan VS Code.
 
-Jadi, jumlah mahasiswa adalah 5 orang dan rata-rata nilainya adalah 74,00.
-6. Kesimpulan
-Program Kalkulator Nilai Mahasiswa merupakan contoh penerapan dasar pemrograman web yang menggabungkan HTML, CSS, dan JavaScript. HTML membangun struktur halaman, CSS mengatur tampilan, sedangkan JavaScript menjalankan logika program.
+## 9. Kesimpulan
 
-Percabangan if-else digunakan untuk memeriksa input dan menentukan predikat nilai berdasarkan beberapa kondisi. Sementara itu, perulangan for digunakan untuk membaca data mahasiswa, menampilkan riwayat nilai, serta menghitung total dan rata-rata nilai.
+Kalkulator Nilai Mahasiswa merupakan aplikasi web sederhana yang menerapkan konsep dasar pemrograman melalui HTML, CSS, dan JavaScript. Percabangan `if-else` digunakan untuk memvalidasi input dan menentukan predikat nilai, sedangkan perulangan `for` digunakan untuk menampilkan data dan menghitung rata-rata nilai mahasiswa.
 
-Melalui program ini, pengguna dapat memahami bagaimana percabangan dan perulangan bekerja dalam menyelesaikan masalah sederhana secara terstruktur, praktis, dan mudah dipahami.
+Melalui program ini, pengguna dapat memahami penerapan percabangan, perulangan, array, fungsi, dan pengolahan data dalam menyelesaikan masalah sederhana secara terstruktur.
+
+**Catatan:** Data mahasiswa disimpan sementara di dalam program dan akan hilang ketika halaman dimuat ulang. Program ini belum menggunakan database untuk penyimpanan permanen.
+
+## 10. Identitas Pembuat
+
+- **Nama:** M. Rifqi Ridwanulloh
+- **Program:** Kalkulator Nilai Mahasiswa
+- **Bahasa:** HTML, CSS, JavaScript
+
