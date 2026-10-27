@@ -166,9 +166,7 @@ Deni	65	D — Kurang
 Eka	50	E — Tidak Lulus
 
 Setelah seluruh data dimasukkan, tabel akan menampilkan kelima mahasiswa tersebut. Jika tombol Proses Ulang Riwayat ditekan, program akan menghitung rata-rata nilai:
-\[
-\frac{95+85+75+65+50}{5}=74
-\]
+\[\frac{95+85+75+65+50}{5}=74\]
 
 Jadi, jumlah mahasiswa adalah 5 orang dan rata-rata nilainya adalah 74,00.
 6. Kesimpulan
